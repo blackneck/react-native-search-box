@@ -306,6 +306,7 @@ class Search extends PureComponent {
           onFocus={this.onFocus}
           underlineColorAndroid="transparent"
           accessibilityTraits="search"
+          keyboardAppearance={this.props.keyboardAppearance || 'default'}
         />
         <TouchableWithoutFeedback onPress={this.onFocus}>
         {this.props.iconSearch
@@ -531,6 +532,7 @@ Search.propTypes = {
   contentWidth: PropTypes.number,
   middleWidth: PropTypes.number,
   editable: PropTypes.bool,
+  keyboardAppearance: PropTypes.oneOf(['default', 'light', 'dark']),
   blurOnSubmit: PropTypes.bool,
   keyboardShouldPersist: PropTypes.bool,
   useClearButton: PropTypes.bool,
